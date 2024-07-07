@@ -5,7 +5,9 @@ test("Handles empty array", () => {
 });
 
 test("Can increment numbers", () => {
-  expect(map([-1, 0, 5, 8, 100500], (x) => x + 1)).toEqual([0, 1, 6, 9, 100501]);
+  expect(map([-1, 0, 5, 8, 100500], (x) => x + 1)).toEqual([
+    0, 1, 6, 9, 100501,
+  ]);
 });
 
 test("Can square numbers", () => {
