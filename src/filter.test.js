@@ -5,25 +5,29 @@ test("Handles empty array", () => {
 });
 
 test("Can select numbers in range", () => {
-  expect(filter([-4, 100500, -100, 0, 1, 5, 15, 148], (x) => x >= 2 && x <= 30)).toEqual([5, 15]);
+  expect(
+    filter([-4, 100500, -100, 0, 1, 5, 15, 148], (x) => x >= 2 && x <= 30),
+  ).toEqual([5, 15]);
 });
 
 test("Can filter objects", () => {
   const arr = [
-    {name: "Vasyl", species: "kit"},
-    {name: "Duke", species: "pes"},
-    {name: "Patron", species: "pes"},
-    {model: "Focus", color: "blue"},
-    {name: "Hrytsko", species: "leleka"}
+    { name: "Vasyl", species: "kit" },
+    { name: "Duke", species: "pes" },
+    { name: "Patron", species: "pes" },
+    { model: "Focus", color: "blue" },
+    { name: "Hrytsko", species: "leleka" },
   ];
   expect(filter(arr, (x) => x.species === "pes")).toEqual([
-    {name: "Duke", species: "pes"},
-    {name: "Patron", species: "pes"}
+    { name: "Duke", species: "pes" },
+    { name: "Patron", species: "pes" },
   ]);
 });
 
 test("Can filter strings", () => {
-  expect(filter(["a", "b", "", "bac", "bc", "mama"], (x) => !x.includes("a"))).toEqual(["b", "", "bc"]);
+  expect(
+    filter(["a", "b", "", "bac", "bc", "mama"], (x) => !x.includes("a")),
+  ).toEqual(["b", "", "bc"]);
 });
 
 test("Does not change original array", () => {
