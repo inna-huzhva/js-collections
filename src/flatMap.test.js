@@ -38,6 +38,6 @@ test("Privides index and original array as second ans third arguments", () => {
     flatMap(stations, (name, i, arr) => {
       if (i === arr.length - 1) return [];
       return [`${name} - ${arr[i + 1]}`];
-    })
+    }),
   ).toEqual(["New Haven - West Haven", "West Haven - Stratford"]);
 });
